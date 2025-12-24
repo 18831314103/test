@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "title_font";
+    font-weight: 400;
+    src: url("title_font.ttf") format("woff2");
+    font-display: swap;
+}
+
+/*@font-face {*/
+/*    font-family: "digital_font";*/
+/*    font-weight: 400;*/
+/*    src: url("digital_font.ttf") format("woff2");*/
+/*    font-display: swap;*/
+/*}*/
+
+@font-face {
+    font-family: "jianzhong_font";
+    font-weight: 400;
+    src: url("jianzhong.ttf") format("woff2");
+    font-display: swap;
+}

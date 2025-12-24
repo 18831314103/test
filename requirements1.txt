@@ -1,0 +1,13 @@
+
+
+# Dash 核心库
+dash==3.1.1
+dash-core-components
+dash-html-components
+dash-table
+
+# Feffery 组件库
+feffery-markdown-components
+feffery_antd_charts
+feffery_antd_components
+feffery_utils_components

@@ -1,0 +1,3500 @@
+[
+        {
+            "No": "TGXT-YY0400-032",
+            "Name": "制冷机模块上电异常",
+            "Payload": "多通道成像仪",
+            "Device": "多通道成像仪",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "( $x<0)|($x>7000 )",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "制冷机驱动电流",
+                                "id": "DMYh024/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "range"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "制冷机控制模式:使能/禁止",
+                                "id": "DMYh023/6",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "2",
+                        "type": "value"
+                    }
+                ],
+                "conditionExpression": "1||2"
+            }
+        },
+        {
+            "No": "TGXT-YY0400-033",
+            "Name": "探测器驱动模块上电异常",
+            "Payload": "多通道成像仪",
+            "Device": "多通道成像仪",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "工作状态字1:近红外探测器电源开关",
+                                "id": "DMYh002/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "工作状态字1:紫外探测器电源开关",
+                                "id": "DMYh002/2",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "2",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "工作状态字1:可见探测器电源开关",
+                                "id": "DMYh002/3",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "3",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "工作状态字3:数传电源开关",
+                                "id": "DMYh004/2",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "4",
+                        "type": "value"
+                    }
+                ],
+                "conditionExpression": "1||2||3||4"
+            }
+        },
+        {
+            "No": "TGXT-YY0400-034",
+            "Name": "调焦、定标机构上电异常",
+            "Payload": "多通道成像仪",
+            "Device": "多通道成像仪",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "工作状态字3:电机驱动电源开关",
+                                "id": "DMYh004/6",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "工作状态字2:调焦、定标电源开关",
+                                "id": "DMYh003/3",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "2",
+                        "type": "value"
+                    }
+                ],
+                "conditionExpression": "1||2"
+            }
+        },
+        {
+            "No": "TGXT-YY0400-035",
+            "Name": "滤光轮机构上电异常",
+            "Payload": "多通道成像仪",
+            "Device": "多通道成像仪",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "工作状态字3:滤光轮驱动电源开关",
+                                "id": "DMYh004/4",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "工作状态字3:电机驱动电源开关",
+                                "id": "DMYh004/6",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "2",
+                        "type": "value"
+                    }
+                ],
+                "conditionExpression": "1||2"
+            }
+        },
+        {
+            "No": "TGXT-YY0400-036",
+            "Name": "快门机构上电异常",
+            "Payload": "多通道成像仪",
+            "Device": "多通道成像仪",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "工作状态字3:快门驱动电源开关",
+                                "id": "DMYh004/3",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "工作状态字3:电机驱动电源开关",
+                                "id": "DMYh004/6",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "2",
+                        "type": "value"
+                    }
+                ],
+                "conditionExpression": "1||2"
+            }
+        },
+        {
+            "No": "TGXT-YY0500-033",
+            "Name": "探测器驱动模块上电异常",
+            "Payload": "积分视场光谱仪",
+            "Device": "积分视场光谱仪",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "工作状态字1_探测器驱动电源主备份",
+                                "id": "DMYi001/7",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "$x<0.5",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "探测器驱动电源电压值",
+                                "id": "DMYi010/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "2",
+                        "type": "range"
+                    }
+                ],
+                "conditionExpression": "1&2"
+            }
+        },
+        {
+            "No": "TGXT-YY0500-035",
+            "Name": "星上灯源上电异常",
+            "Payload": "积分视场光谱仪",
+            "Device": "积分视场光谱仪",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "工作状态字1_卤素灯1",
+                                "id": "DMYi001/6",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "工作状态字1_卤素灯2",
+                                "id": "DMYi001/5",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "2",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "工作状态字1_汞氩灯1",
+                                "id": "DMYi001/4",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "3",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "工作状态字1_汞氩灯2",
+                                "id": "DMYi001/3",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "4",
+                        "type": "value"
+                    }
+                ],
+                "conditionExpression": "1||2||3||4"
+            }
+        },
+        {
+            "No": "TGXT-YY0400-045",
+            "Name": "热控模块测温功能异常",
+            "Payload": "多通道成像仪",
+            "Device": "多通道成像仪",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "( $x<-40)|($x>50 )",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "主框架控温回路",
+                                "id": "DMYh026/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "range"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "( $x<-40)|($x>50 )",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "电子学-1测温回路",
+                                "id": "DMYh027/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "2",
+                        "type": "range"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "( $x<-40)|($x>50 )",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "散热板测温回路1",
+                                "id": "DMYh028/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "3",
+                        "type": "range"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "( $x<-40)|($x>50 )",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "散热板测温回路2",
+                                "id": "DMYh029/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "4",
+                        "type": "range"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "( $x<-40)|($x>50 )",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "MCI光学底板-1控温回路",
+                                "id": "DMYh030/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "5",
+                        "type": "range"
+                    }
+                ],
+                "conditionExpression": "1&2&3&4&5"
+            }
+        },
+        {
+            "No": "TGXT-YY0500-039",
+            "Name": "主控模块与设施总控箱的PPS秒脉冲接口异常",
+            "Payload": "积分视场光谱仪",
+            "Device": "积分视场光谱仪",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "$x==2",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "工作状态字3_绝对定位模式",
+                                "id": "DMYi003/6",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "value"
+                    }
+                ],
+                "conditionExpression": "1"
+            }
+        },
+        {
+            "No": "TGXT-YY0400-046",
+            "Name": "热控模块加热功能异常",
+            "Payload": "多通道成像仪",
+            "Device": "多通道成像仪",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "( $x<1)|($x>6 )",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "MCI&IFS制冷机母线电流遥测",
+                                "id": "VMYh002/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "range"
+                    }
+                ],
+                "conditionExpression": "1"
+            }
+        },
+        {
+            "No": "TGXT-YY0500-040",
+            "Name": "A.10\t主控模块与设施总控箱的LVDS上注数据接口异常",
+            "Payload": "积分视场光谱仪",
+            "Device": "积分视场光谱仪",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "$x==3",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "FPGA代码重注及校验状态_FPGA固化",
+                                "id": "DMYi007/4",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "value"
+                    }
+                ],
+                "conditionExpression": "1"
+            }
+        },
+        {
+            "No": "TGXT-YY0400-047",
+            "Name": "制冷机驱动功能异常",
+            "Payload": "多通道成像仪",
+            "Device": "多通道成像仪",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "制冷机控制模式:温控点精测范围",
+                                "id": "DMYh023/2",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "value"
+                    }
+                ],
+                "conditionExpression": "1"
+            }
+        },
+        {
+            "No": "TGXT-YY0500-045",
+            "Name": "制冷机驱动功能异常",
+            "Payload": "积分视场光谱仪",
+            "Device": "积分视场光谱仪",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "工作状态字3_制冷机是否达到温控点精测范围",
+                                "id": "DMYi003/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "value"
+                    }
+                ],
+                "conditionExpression": "1"
+            }
+        },
+        {
+            "No": "TGXT-YY0500-046",
+            "Name": "制冷机故障",
+            "Payload": "积分视场光谱仪",
+            "Device": "积分视场光谱仪",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "工作状态字3_制冷机是否达到温控点精测范围",
+                                "id": "DMYi003/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "value"
+                    }
+                ],
+                "conditionExpression": "1"
+            }
+        },
+        {
+            "No": "TGXT-YY0500-052",
+            "Name": "星上灯源故障",
+            "Payload": "积分视场光谱仪",
+            "Device": "积分视场光谱仪",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "工作状态字1_卤素灯1",
+                                "id": "DMYi001/6",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "工作状态字1_卤素灯2",
+                                "id": "DMYi001/5",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "2",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "工作状态字1_汞氩灯1",
+                                "id": "DMYi001/4",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "3",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "工作状态字1_汞氩灯2",
+                                "id": "DMYi001/3",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "4",
+                        "type": "value"
+                    }
+                ],
+                "conditionExpression": "1&2&3&4"
+            }
+        },
+        {
+            "No": "TGXT-YY0400-048",
+            "Name": "制冷机故障",
+            "Payload": "多通道成像仪",
+            "Device": "多通道成像仪",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "制冷机控制模式:温控点精测范围",
+                                "id": "DMYh023/2",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "value"
+                    }
+                ],
+                "conditionExpression": "1"
+            }
+        },
+        {
+            "No": "TGXT-YY0500-053",
+            "Name": "IFS断电前内部电路未完全关闭",
+            "Payload": "积分视场光谱仪",
+            "Device": "积分视场光谱仪",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "$x>0.1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "IFS本体电流遥测",
+                                "id": "IMYi001/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "range"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "$x>0.5",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "制冷机电控箱+5V遥测",
+                                "id": "DMYi012/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "2",
+                        "type": "range"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "$x>0.5",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "制冷机+42V遥测",
+                                "id": "DMYi013/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "3",
+                        "type": "range"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "$x>0.5",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "探测器驱动电源电压值",
+                                "id": "DMYi010/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "4",
+                        "type": "range"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "$x>0.5",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "定标机构电源电压值",
+                                "id": "DMYi011/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "5",
+                        "type": "range"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "工作状态字1_卤素灯1",
+                                "id": "DMYi001/6",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "6",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "工作状态字1_卤素灯2",
+                                "id": "DMYi001/5",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "7",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "工作状态字1_汞氩灯1",
+                                "id": "DMYi001/4",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "8",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "工作状态字1_汞氩灯2",
+                                "id": "DMYi001/3",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "9",
+                        "type": "value"
+                    }
+                ],
+                "conditionExpression": "1&(2||3||4||5||6||7||8||9)"
+            }
+        },
+        {
+            "No": "TGXT-YY0500-056",
+            "Name": "FPGA软件上注故障",
+            "Payload": "积分视场光谱仪",
+            "Device": "积分视场光谱仪",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "$x==3",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "FPGA代码重注及校验状态_FPGA固化",
+                                "id": "DMYi007/4",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "value"
+                    }
+                ],
+                "conditionExpression": "1"
+            }
+        },
+        {
+            "No": "TGXT-YY0500-057",
+            "Name": "A.27\tDSP软件上注故障",
+            "Payload": "积分视场光谱仪",
+            "Device": "积分视场光谱仪",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "DSP代码重注及校验状态_DSP段校验",
+                                "id": "DMYi008/3",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "$x==3",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "DSP代码重注及校验状态_DSP固化",
+                                "id": "DMYi008/4",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "2",
+                        "type": "value"
+                    }
+                ],
+                "conditionExpression": "1||2"
+            }
+        },
+        {
+            "No": "TGXT-YY0400-051",
+            "Name": "探测器故障",
+            "Payload": "多通道成像仪",
+            "Device": "多通道成像仪",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x>=2",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "可见探测器电流遥测",
+                                "id": "DMYh034/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "range"
+                    }
+                ],
+                "conditionExpression": "1"
+            }
+        },
+        {
+            "No": "TGXT-YY0400-054",
+            "Name": "快门机构驱动异常",
+            "Payload": "多通道成像仪",
+            "Device": "多通道成像仪",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "工作状态字4:近红外快门运动状态",
+                                "id": "DMYh005/5",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "工作状态字4:紫外快门运动状态",
+                                "id": "DMYh005/6",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "2",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "工作状态字4:可见快门运动状态",
+                                "id": "DMYh005/7",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "3",
+                        "type": "value"
+                    }
+                ],
+                "conditionExpression": "1||2||3"
+            }
+        },
+        {
+            "No": "TGXT-YY0400-055",
+            "Name": "快门机构故障",
+            "Payload": "多通道成像仪",
+            "Device": "多通道成像仪",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "工作状态字4:近红外快门运动状态",
+                                "id": "DMYh005/5",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "工作状态字4:可见快门运动状态",
+                                "id": "DMYh005/7",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "2",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "工作状态字4:紫外快门运动状态",
+                                "id": "DMYh005/6",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "3",
+                        "type": "value"
+                    }
+                ],
+                "conditionExpression": "1||2||3"
+            }
+        },
+        {
+            "No": "TGXT-YY0400-056",
+            "Name": "调焦机构驱动异常",
+            "Payload": "多通道成像仪",
+            "Device": "多通道成像仪",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x>1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "多通道电箱母线电流遥测",
+                                "id": "VMYh003/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "range"
+                    }
+                ],
+                "conditionExpression": "1"
+            }
+        },
+        {
+            "No": "TGXT-YY0400-057",
+            "Name": "调焦机构故障",
+            "Payload": "多通道成像仪",
+            "Device": "多通道成像仪",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x>1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "多通道电箱母线电流遥测",
+                                "id": "VMYh003/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "range"
+                    }
+                ],
+                "conditionExpression": "1"
+            }
+        },
+        {
+            "No": "TGXT-YY0400-058",
+            "Name": "定标机构驱动异常",
+            "Payload": "多通道成像仪",
+            "Device": "多通道成像仪",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "工作状态字2:可见、近红外定标电机位置状态",
+                                "id": "DMYh003/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "value"
+                    }
+                ],
+                "conditionExpression": "1"
+            }
+        },
+        {
+            "No": "TGXT-YY0400-059",
+            "Name": "定标机构故障",
+            "Payload": "多通道成像仪",
+            "Device": "多通道成像仪",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "工作状态字2:可见、近红外定标电机位置状态",
+                                "id": "DMYh003/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "value"
+                    }
+                ],
+                "conditionExpression": "1"
+            }
+        },
+        {
+            "No": "TGXT-YY0600-032",
+            "Name": "综合控制软件加载失败",
+            "Payload": "星冕仪模块",
+            "Device": "星冕仪模块",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x>3.6 & $x<4.6",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "星冕仪母线开关状态遥测",
+                                "id": "VMYj003/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "range"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x>0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "星冕仪100V母线电流遥测",
+                                "id": "IMYj001/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "2",
+                        "type": "range"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "5"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "综控帧计数",
+                                "id": "DMYj003/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "3",
+                        "type": "delta"
+                    }
+                ],
+                "conditionExpression": "1&2&3"
+            }
+        },
+        {
+            "No": "TGXT-YY0400-060",
+            "Name": "定标灯故障",
+            "Payload": "多通道成像仪",
+            "Device": "多通道成像仪",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "工作状态字3:定标灯1电源开关",
+                                "id": "DMYh004/8",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "工作状态字3:定标灯2电源开关",
+                                "id": "DMYh004/7",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "2",
+                        "type": "value"
+                    }
+                ],
+                "conditionExpression": "1||2"
+            }
+        },
+        {
+            "No": "TGXT-YY0400-061",
+            "Name": "MCI关机前内部电路未完全关闭",
+            "Payload": "多通道成像仪",
+            "Device": "多通道成像仪",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "工作状态字1:可见探测器电源开关",
+                                "id": "DMYh002/3",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "工作状态字1:紫外定标电机位置状态",
+                                "id": "DMYh002/4",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "2",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "工作状态字1:近红外探测器电源开关",
+                                "id": "DMYh002/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "3",
+                        "type": "value"
+                    }
+                ],
+                "conditionExpression": "1||2||3"
+            }
+        },
+        {
+            "No": "TGXT-YY0600-033",
+            "Name": "光学基板热控功能开启失败",
+            "Payload": "星冕仪模块",
+            "Device": "星冕仪模块",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x==3",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "星冕仪工作模式",
+                                "id": "DMYj016/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "(主)综控热控供电28V遥测",
+                                "id": "DMYj019/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "2",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "(备)综控热控供电28V遥测",
+                                "id": "DMYj019/2",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "3",
+                        "type": "value"
+                    }
+                ],
+                "conditionExpression": "1&2&3"
+            }
+        },
+        {
+            "No": "TGXT-YY0600-034",
+            "Name": "数据处理箱上电异常",
+            "Payload": "星冕仪模块",
+            "Device": "星冕仪模块",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x==3",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "星冕仪工作模式",
+                                "id": "DMYj016/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "(主)综控数据箱供电28V遥测",
+                                "id": "DMYj021/3",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "2",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "(备)综控数据箱供电28V遥测",
+                                "id": "DMYj021/4",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "3",
+                        "type": "value"
+                    }
+                ],
+                "conditionExpression": "1&2&3"
+            }
+        },
+        {
+            "No": "TGXT-YY0600-035",
+            "Name": "数据处理箱CAN通讯故障",
+            "Payload": "星冕仪模块",
+            "Device": "星冕仪模块",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "数据处理箱发送遥测帧计数",
+                                "id": "DMYj091/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "value"
+                    }
+                ],
+                "conditionExpression": "1"
+            }
+        },
+        {
+            "No": "TGXT-YY0600-036",
+            "Name": "倾斜校正控制箱上电故障",
+            "Payload": "星冕仪模块",
+            "Device": "星冕仪模块",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x==3",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "星冕仪工作模式",
+                                "id": "DMYj016/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "(主)综控倾斜箱供电28V遥测",
+                                "id": "DMYj020/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "2",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "(备)综控倾斜箱供电28V遥测",
+                                "id": "DMYj020/2",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "3",
+                        "type": "value"
+                    }
+                ],
+                "conditionExpression": "1&2&3"
+            }
+        },
+        {
+            "No": "TGXT-YY0600-038",
+            "Name": "激光器TEC温控开启故障",
+            "Payload": "星冕仪模块",
+            "Device": "星冕仪模块",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "制冷机控制箱发送遥测帧计数",
+                                "id": "DMYj069/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "value"
+                    }
+                ],
+                "conditionExpression": "1"
+            }
+        },
+        {
+            "No": "TGXT-YY0600-072",
+            "Name": "LVDS总线数据接收异常",
+            "Payload": "星冕仪模块",
+            "Device": "星冕仪模块",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x==55H",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "综控代码重注状态",
+                                "id": "DMYj030/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "接收当前段注入文件计数",
+                                "id": "DMYj027/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "2",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "数据上注文件正确接收计数",
+                                "id": "DMYj028/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "3",
+                        "type": "value"
+                    }
+                ],
+                "conditionExpression": "1&2&3"
+            }
+        },
+        {
+            "No": "TGXT-YY0600-039",
+            "Name": "近红外成像相机上电异常",
+            "Payload": "星冕仪模块",
+            "Device": "星冕仪模块",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "(主)综控近红外供电15V遥测",
+                                "id": "DMYj025/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "(备)综控近红外供电15V遥测",
+                                "id": "DMYj025/2",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "2",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "(主)综控近红外供电5.2V遥测",
+                                "id": "DMYj025/3",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "3",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "(备)综控近红外供电5.2V遥测",
+                                "id": "DMYj025/4",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "4",
+                        "type": "value"
+                    }
+                ],
+                "conditionExpression": "1&2&3&4"
+            }
+        },
+        {
+            "No": "TGXT-YY0600-040",
+            "Name": "近红外成像相机CAN通讯故障",
+            "Payload": "星冕仪模块",
+            "Device": "星冕仪模块",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "近红外成像相机发送遥测帧计数",
+                                "id": "DMYj173/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "value"
+                    }
+                ],
+                "conditionExpression": "1"
+            }
+        },
+        {
+            "No": "TGXT-YY0600-073",
+            "Name": "1553B总线数据接收异常",
+            "Payload": "星冕仪模块",
+            "Device": "星冕仪模块",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x==55H",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "综控代码重注状态",
+                                "id": "DMYj030/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "接收当前段注入文件计数",
+                                "id": "DMYj027/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "2",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "数据上注文件正确接收计数",
+                                "id": "DMYj028/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "3",
+                        "type": "value"
+                    }
+                ],
+                "conditionExpression": "1&2&3"
+            }
+        },
+        {
+            "No": "TGXT-YY0600-043",
+            "Name": "波前探测相机上电异常",
+            "Payload": "星冕仪模块",
+            "Device": "星冕仪模块",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "(主)综控波前供电36V遥测",
+                                "id": "DMYj023/3",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "(备)综控波前供电36V遥测",
+                                "id": "DMYj023/4",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "2",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "(主)综控波前供电18V遥测",
+                                "id": "DMYj024/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "3",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "(备)综控波前供电18V遥测",
+                                "id": "DMYj024/2",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "4",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "(主)综控波前供电5.2V遥测",
+                                "id": "DMYj024/3",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "5",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "(备)综控波前供电5.2V遥测",
+                                "id": "DMYj024/4",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "6",
+                        "type": "value"
+                    }
+                ],
+                "conditionExpression": "1&2&3&4&5&6"
+            }
+        },
+        {
+            "No": "TGXT-YY0600-047",
+            "Name": "可见光成像相机上电异常",
+            "Payload": "星冕仪模块",
+            "Device": "星冕仪模块",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "(主)综控可见光供电36V遥测",
+                                "id": "DMYj022/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "(备)综控可见光供电36V遥测",
+                                "id": "DMYj022/2",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "2",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "(主)综控可见光供电18V遥测",
+                                "id": "DMYj022/3",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "3",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "(备)综控可见光供电18V遥测",
+                                "id": "DMYj022/4",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "4",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "(主)综控可见光供电5.2V遥测",
+                                "id": "DMYj023/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "5",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "(备)综控可见光供电5.2V遥测",
+                                "id": "DMYj023/2",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "6",
+                        "type": "value"
+                    }
+                ],
+                "conditionExpression": "1&2&3&4&5&6"
+            }
+        },
+        {
+            "No": "TGXT-YY0600-074",
+            "Name": "内部CAN文件分发失败",
+            "Payload": "星冕仪模块",
+            "Device": "星冕仪模块",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x==AAH",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "综控代码重注状态",
+                                "id": "DMYj030/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x==AAH",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "数据处理箱数据文件校验结果/数据接收状态",
+                                "id": "DMYj100/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "2",
+                        "type": "value"
+                    }
+                ],
+                "conditionExpression": "1||2"
+            }
+        },
+        {
+            "No": "TGXT-YY0600-051",
+            "Name": "TEC及运动控制箱上电异常",
+            "Payload": "星冕仪模块",
+            "Device": "星冕仪模块",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "(主)综控TEC供电15V遥测",
+                                "id": "DMYj020/3",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "(备)综控TEC供电15V遥测",
+                                "id": "DMYj020/4",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "2",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "(主)综控TEC供电5.2V遥测",
+                                "id": "DMYj021/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "3",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "(备)综控TEC供电5.2V遥测",
+                                "id": "DMYj021/2",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "4",
+                        "type": "value"
+                    }
+                ],
+                "conditionExpression": "1&2&3&4"
+            }
+        },
+        {
+            "No": "TGXT-YY0600-075",
+            "Name": "软件固化失败",
+            "Payload": "星冕仪模块",
+            "Device": "星冕仪模块",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x==69H",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "综控代码重注状态",
+                                "id": "DMYj030/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "value"
+                    }
+                ],
+                "conditionExpression": "1"
+            }
+        },
+        {
+            "No": "TGXT-YY0600-056",
+            "Name": "摆镜位置控制故障",
+            "Payload": "星冕仪模块",
+            "Device": "星冕仪模块",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x<0.05",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "快摆镜轴1应变片遥测",
+                                "id": "DMYj126/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "delta"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x<0.05",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "快摆镜轴2应变片遥测",
+                                "id": "DMYj126/2",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "2",
+                        "type": "delta"
+                    }
+                ],
+                "conditionExpression": "1&2"
+            }
+        },
+        {
+            "No": "TGXT-YY0600-076",
+            "Name": "星冕仪上电OC指令接收异常",
+            "Payload": "星冕仪模块",
+            "Device": "星冕仪模块",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "4"
+                        },
+                        "expression": "$x>-0.3 & $x<0.3",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "星冕仪母线开关状态遥测",
+                                "id": "VMYj003/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "range"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "4"
+                        },
+                        "expression": "$x<0.11",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "星冕仪100V母线电流遥测",
+                                "id": "IMYj001/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "2",
+                        "type": "range"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "4"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "综控帧计数",
+                                "id": "DMYj003/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "3",
+                        "type": "delta"
+                    }
+                ],
+                "conditionExpression": "1&2&3"
+            }
+        },
+        {
+            "No": "TGXT-YY0600-057",
+            "Name": "波像差校正控制箱上电异常",
+            "Payload": "星冕仪模块",
+            "Device": "星冕仪模块",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "1"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "IFS主备状态遥测",
+                                "id": "VMYi001/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "(主)综控波像差供电28V遥测",
+                                "id": "DMYj019/3",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "2",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "(备)综控波像差供电28V遥测",
+                                "id": "DMYj019/4",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "3",
+                        "type": "value"
+                    }
+                ],
+                "conditionExpression": "1&2&3"
+            }
+        },
+        {
+            "No": "TGXT-YY0600-077",
+            "Name": "星冕仪程控B指令响应异常",
+            "Payload": "星冕仪模块",
+            "Device": "星冕仪模块",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x==1BH",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "星冕仪工作模式",
+                                "id": "DMYj016/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "value"
+                    }
+                ],
+                "conditionExpression": "1"
+            }
+        },
+        {
+            "No": "TGXT-YY0600-080",
+            "Name": "星冕仪1553B数据注入指令异常",
+            "Payload": "星冕仪模块",
+            "Device": "星冕仪模块",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "2"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "综控帧计数",
+                                "id": "DMYj003/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "increase"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "10"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "1553B数据注入指令总接收计数",
+                                "id": "DMYj004/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "2",
+                        "type": "delta"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "10"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "1553B数据注入指令总接收计数",
+                                "id": "DMYj004/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "3",
+                        "type": "increase"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "10"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "1553B数据注入指令错误计数",
+                                "id": "DMYj005/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "4",
+                        "type": "delta"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "10"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "1553B数据注入指令错误计数",
+                                "id": "DMYj005/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "5",
+                        "type": "increase"
+                    }
+                ],
+                "conditionExpression": "1&((2&4)||(3&5))"
+            }
+        },
+        {
+            "No": "TGXT-YY0600-078",
+            "Name": "星冕仪1553B时间广播异常",
+            "Payload": "星冕仪模块",
+            "Device": "星冕仪模块",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "1"
+                        },
+                        "expression": "$x==1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "时间码(秒)",
+                                "id": "DMYj002/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "increase"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "1"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "时间码(亚秒)",
+                                "id": "DMYj002/2",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "2",
+                        "type": "value"
+                    }
+                ],
+                "conditionExpression": "1&2"
+            }
+        },
+        {
+            "No": "TGXT-YY0600-081",
+            "Name": "星冕仪对上LVDS数据传输异常",
+            "Payload": "星冕仪模块",
+            "Device": "星冕仪模块",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "($x==0FH)|($x==55H)",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "综控代码重注状态",
+                                "id": "DMYj030/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "数据上注文件正确接收计数",
+                                "id": "DMYj028/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "2",
+                        "type": "delta"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "数据上注文件错误计数",
+                                "id": "DMYj029/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "3",
+                        "type": "delta"
+                    }
+                ],
+                "conditionExpression": "1&2&3"
+            }
+        },
+        {
+            "No": "TGXT-YY0600-079",
+            "Name": "星冕仪1553B遥测异常",
+            "Payload": "星冕仪模块",
+            "Device": "星冕仪模块",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "($x>2.1 & $x<2.7)|($x>3.6 & $x<4.6)",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "星冕仪母线开关状态遥测",
+                                "id": "VMYj003/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "range"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x>0.11",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "星冕仪100V母线电流遥测",
+                                "id": "IMYj001/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "2",
+                        "type": "range"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "综控帧计数",
+                                "id": "DMYj003/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "3",
+                        "type": "delta"
+                    }
+                ],
+                "conditionExpression": "1&2&3"
+            }
+        },
+        {
+            "No": "TGXT-YY0400-031",
+            "Name": "主控模块上电异常",
+            "Payload": "多通道成像仪",
+            "Device": "多通道成像仪",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "$x==0.1",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "多通道电箱母线电流遥测",
+                                "id": "VMYh003/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "value"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "60"
+                        },
+                        "expression": "($x>=1 & $x<2)|($x>2.5 & $x<3.7)|($x>4.6 )",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "多通道主备状态遥测",
+                                "id": "VMYh001/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "2",
+                        "type": "range"
+                    }
+                ],
+                "conditionExpression": "1||2"
+            }
+        },
+        {
+            "No": "TGXT-YY0500-031",
+            "Name": "主控模块上电异常",
+            "Payload": "积分视场光谱仪",
+            "Device": "积分视场光谱仪",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "10"
+                        },
+                        "expression": "( $x<1)|($x>1 & $x<1.5)|($x>2.5 & $x<3.5)|($x>4.5 )",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "IFS主备状态遥测",
+                                "id": "VMYi001/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "range"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "10"
+                        },
+                        "expression": "( $x<1)|($x>1 & $x<1.5)|($x>2.5 & $x<3.5)|($x>4.5 )",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "IFS本体电流遥测",
+                                "id": "IMYi001/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "2",
+                        "type": "range"
+                    }
+                ],
+                "conditionExpression": "1||2"
+            }
+        },
+        {
+            "No": "TGXT-YY0500-032",
+            "Name": "制冷机模块上电异常",
+            "Payload": "积分视场光谱仪",
+            "Device": "积分视场光谱仪",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "( $x<1)|($x>1 & $x<1.6)|($x>2.4 & $x<2.6)|($x>3.4 )",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "制冷机+42V遥测",
+                                "id": "DMYi013/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "range"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "( $x<1)|($x>1 & $x<1.6)|($x>2.4 & $x<2.6)|($x>3.4 )",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "制冷机电控箱+5V遥测",
+                                "id": "DMYi012/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "2",
+                        "type": "range"
+                    }
+                ],
+                "conditionExpression": "1||2"
+            }
+        },
+        {
+            "No": "TGXT-YY0500-043",
+            "Name": "热控模块测温功能异常",
+            "Payload": "积分视场光谱仪",
+            "Device": "积分视场光谱仪",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "( $x<-40)|($x>80 )",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "IFS脉管端常温热管冷端测温回路",
+                                "id": "DMYi039/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "range"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "( $x<-40)|($x>80 )",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "IFS压缩机测温回路",
+                                "id": "DMYi037/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "2",
+                        "type": "range"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "( $x<-40)|($x>80 )",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "IFS光谱仪框架控温回路",
+                                "id": "DMYi032/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "3",
+                        "type": "range"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "( $x<-40)|($x>80 )",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "主框架C点控温回路",
+                                "id": "DMYi027/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "4",
+                        "type": "range"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "( $x<-40)|($x>80 )",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "IFS脉管端测温回路",
+                                "id": "DMYi035/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "5",
+                        "type": "range"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "( $x<-40)|($x>80 )",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "主框架A点控温回路",
+                                "id": "DMYi025/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "6",
+                        "type": "range"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "( $x<-40)|($x>80 )",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "IFS视场放大器支架控温回路",
+                                "id": "DMYi033/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "7",
+                        "type": "range"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "( $x<-40)|($x>80 )",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "主框架B点控温回路",
+                                "id": "DMYi026/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "8",
+                        "type": "range"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "( $x<-40)|($x>80 )",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "主框架控温回路",
+                                "id": "DMYi024/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "9",
+                        "type": "range"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "( $x<-40)|($x>80 )",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "IFS脉管端常温热管热端测温回路",
+                                "id": "DMYi038/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "10",
+                        "type": "range"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "( $x<-40)|($x>80 )",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "IFS光学底板-1控温回路",
+                                "id": "DMYi028/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "11",
+                        "type": "range"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "( $x<-40)|($x>80 )",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "IFS可见近红外探测器测温回路",
+                                "id": "DMYi036/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "12",
+                        "type": "range"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "( $x<-40)|($x>80 )",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "制冷机散热板控温回路",
+                                "id": "DMYi034/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "13",
+                        "type": "range"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "( $x<-40)|($x>80 )",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "电箱框架D点控温回路",
+                                "id": "DMYi030/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "14",
+                        "type": "range"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "( $x<-40)|($x>80 )",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "IFS压缩机常温热管热端测温回路",
+                                "id": "DMYi040/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "15",
+                        "type": "range"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "( $x<-40)|($x>80 )",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "IFS柔性冷链控温回路",
+                                "id": "DMYi042/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "16",
+                        "type": "range"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "( $x<-40)|($x>80 )",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "IFS压缩机常温热管冷端测温回路",
+                                "id": "DMYi041/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "17",
+                        "type": "range"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "( $x<-40)|($x>80 )",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "遮光罩控温回路",
+                                "id": "DMYi029/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "18",
+                        "type": "range"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "( $x<-40)|($x>80 )",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "IFS紫外探测器测温回路",
+                                "id": "DMYi043/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "19",
+                        "type": "range"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "20"
+                        },
+                        "expression": "( $x<-40)|($x>80 )",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "IFS光学底板-2控温回路",
+                                "id": "DMYi031/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "20",
+                        "type": "range"
+                    }
+                ],
+                "conditionExpression": "1||2||3||4||5||6||7||8||9||10||11||12||13||14||15||16||17||18||19||20"
+            }
+        },
+        {
+            "No": "TGXT-YY0600-031",
+            "Name": "星冕仪上电失败",
+            "Payload": "星冕仪模块",
+            "Device": "星冕仪模块",
+            "SegMent": "TGXT_光学舱",
+            "RuleJudgMent": {
+                "condition": [
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "5"
+                        },
+                        "expression": "$x==0",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "综控帧计数",
+                                "id": "DMYj003/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "1",
+                        "type": "delta"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x>-0.3 & $x<0.3",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "星冕仪母线开关状态遥测",
+                                "id": "VMYj003/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "2",
+                        "type": "range"
+                    },
+                    {
+                        "duration": {
+                            "unit": "sec",
+                            "value": "30"
+                        },
+                        "expression": "$x<0.11",
+                        "level": "",
+                        "paramList": [
+                            {
+                                "code": "x",
+                                "name": "星冕仪100V母线电流遥测",
+                                "id": "IMYj001/1",
+                                "type": "int"
+                            }
+                        ],
+                        "index": "3",
+                        "type": "range"
+                    }
+                ],
+                "conditionExpression": "1&2&3"
+            }
+        }
+    ]

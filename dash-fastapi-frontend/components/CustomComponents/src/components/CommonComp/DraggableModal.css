@@ -1,0 +1,72 @@
+/**
+ * time: 2025-04-02
+ * author: XJ
+ * description: 弹出框高阶组件样式表
+ */
+.draggable-modal {
+    background: #1f1f1f;
+    border-radius: 2px;
+    box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 
+                0 6px 16px 0 rgba(0, 0, 0, 0.08), 
+                0 9px 28px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #ffffffd9;
+  }
+  .ant-modal-wrap{
+    position: static !important;
+  }
+  .draggable-modal-header {
+    padding: 10px 15px;
+    cursor: move;
+    background: #1f1f1f;
+    border-bottom: 1px solid #f0f0f0;
+    font-weight: 500;
+    font-size: 16px;
+    /* color: rgba(0, 0, 0, 0.85); */
+    user-select: none;
+  }
+  
+  .draggable-modal-content {
+    flex: 1;
+    overflow: auto;
+  }
+  
+  .draggable-modal-resize-handle {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 16px;
+    height: 16px;
+    cursor: nwse-resize;
+    background: #f0f0f0;
+    border-top: 1px solid #d9d9d9;
+    border-left: 1px solid #d9d9d9;
+    z-index: 2000;
+  }
+  
+  /* 重置antd modal样式 */
+  .ant-modal {
+    position: static !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    top: 0 !important;
+    pointer-events: all !important;
+  }
+  
+  .ant-modal-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    box-shadow: none;
+    padding: 15px !important;
+    border-radius: 0px 0px 2px 2px !important;
+  }
+  
+  .ant-modal-body {
+    flex: 1;
+    padding: 0 !important;
+  }

@@ -1,0 +1,17 @@
+
+/*分割面板样式*/
+.spliter_css {
+
+    :global {
+        .ant-splitter-bar-collapse-bar {
+            opacity: 1 !important;
+        }
+        .ant-splitter-bar-collapse-bar-start{
+            bottom: 12px !important;
+        }
+        .ant-splitter-bar-collapse-bar-end{
+            top: 0px !important;
+        }
+    }
+
+}
